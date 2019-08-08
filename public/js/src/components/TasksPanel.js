@@ -1,10 +1,11 @@
 function TasksPanel(props){
-    let tasks = props.tasks.map(task =>{
+    let tasks = props.tasks.map((task, index) =>
         <TaskItem
+            key = {index}
             name = {task.task}
             date = {task.date}
         />
-    })
+    )
 
     return(
         <div className="panel panel-default">

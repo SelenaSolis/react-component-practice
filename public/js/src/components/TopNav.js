@@ -1,4 +1,16 @@
 function TopNav(props){
+
+    let messages = props.messages.map(m =>
+        <MessagePreview 
+            messageName = {m.name}
+            messageText = {m.message}
+            messageDate = {m.date}
+            />
+    )
+    
+        
+    
+
 return (
 <ul className="nav navbar-right top-nav">
     <li className="dropdown">
@@ -6,7 +18,7 @@ return (
         <ul className="dropdown-menu message-dropdown">
 
             {/*  <MessagePreview>   */}
-            <MessagePreview/>
+            {messages}
             {/*  </MessagePreview>   */}
 
 

@@ -1,6 +1,7 @@
 function TransactionsPanel(props){
-    let orders = props.orders.map((order) =>
+    let orders = props.orders.map((order, index) =>
     <TransactionRow
+        key = {index}
         id = {order.id}
         orderDate = {order.orderDate}
         orderTime = {order.orderTime}

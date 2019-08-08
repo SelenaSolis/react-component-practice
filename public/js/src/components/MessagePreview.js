@@ -7,12 +7,14 @@ return(
                     <img className="media-object" src="http://placehold.it/50x50" alt="" />
                 </span>
                 <div className="media-body">
-                    <h5 className="media-heading"><strong>John Smith</strong>
+                    <h5 className="media-heading"><strong>{props.messageName}</strong>
                     </h5>
                     {/*  <DateTime>   */}
-                    <DateTime/>
+                    <DateTime
+                    date = {props.messageDate}
+                    />
                     {/*  </DateTime>   */}
-                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                    <p>{props.messageText}</p>
                 </div>
             </div>
         </a>
